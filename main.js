@@ -1,6 +1,8 @@
 let question=[
-    question1="what does HTML stand for ?",
-    question2="Which method is used to get ID"
+    "what is a baby dog called ?",
+    "Which is the largest animal in the Earth ?",
+    "Which animal is known as King of the Jungle ?",
+    "Which animal is tallest in the world",
 ]
 
 
@@ -76,6 +78,33 @@ function optionRendering(){
     optionPack[i].appendChild(noofQuestions[i])
     
     }
+}
+
+let qa=document.getElementById("question")
+
+// slide
+let slidecounter=0
+console.log(optionPack)
+qa.textContent=question[slidecounter]
+function slide(){
+     slidecounter++
+     if(slidecounter<=3){
+        
+    optionPack.forEach((slideItems)=>{
+    slideItems.style.transform=`translateX(${slidecounter*-100}%)`
+    
+    qa.textContent=question[slidecounter]
+    
+   })
+
+}
+else{
+    slidecounter=0
+    optionPack.forEach((slideItems)=>{
+    slideItems.style.transform=`translateX(${slidecounter*-100}%)`
+     qa.textContent=question[0]
+   })
+}
 }
 
 

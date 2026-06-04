@@ -90,3 +90,21 @@ body{
     cursor:pointer;
 }
 
+.questionPack{
+    min-width: 100%;
+    transition-duration: 1s;
+}
+
+#forflex{
+    display: flex;
+    /* border: solid black 2px; */
+    overflow: hidden;
+}
+
+#forflex::-webkit-scrollbar{
+    display: none;
+}
+
+#question{
+    transition-duration: 1s;
+}
