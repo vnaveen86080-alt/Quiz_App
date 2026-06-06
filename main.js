@@ -5,30 +5,29 @@ let question=[
     "Which animal is tallest in the world",
 ]
 
-
 let options=[{
-    option1:"Hyper Text Markup Language",
-    option2:"High Text Machine Language",
-    option3:"Home Tool Markup Language",
-    option4:"Hyper Tool Machine Language"
+    option1:"Kitten",
+    option2:"Half",
+    option3:"Puppy",
+    option4:"Cub"
 },
     {
-        option1:"queryselectorAll",
-        option2:"getelementbyID",
-        option3:"getElementbyClassName",
-        option4:"createElement"
+        option1:"Elephant",
+        option2:"Blue Whale",
+        option3:"Giraffe",
+        option4:"Shark"
     },
     {
-    option1:"Hyper Text Markup Language",
-    option2:"High Text Machine Language",
-    option3:"Home Tool Markup Language",
-    option4:"Hyper Tool Machine Language"
+    option1:"Tiger",
+    option2:"Lion",
+    option3:"Fox",
+    option4:"Bear"
 },
     {
-        option1:"queryselectorAll",
-        option2:"getelementbyID",
-        option3:"getElementbyClassName",
-        option4:"createElement"
+        option1:"Elepant",
+        option2:"Giraffee",
+        option3:"Tiger",
+        option4:"Deer"
     }
 ]
 // question pack
@@ -108,11 +107,50 @@ else{
 }
 
 
-
-
-
 optionRendering()
 let q=document.getElementById("question")
+
+
+let opts=document.querySelectorAll(".options")
+
+let Answers=[
+    "Puppy",
+    "Blue Whale",
+    "Lion",
+    "Giraffee"
+]
+let summa=[]
+
+let urAnswer=0;
+
+let ans=0
+
+function callback(){
+    console.log(ans)
+}
+
+opts.forEach((optz,callback)=>{
+    optz.addEventListener("click",function(e){
+      let final=e.target.textContent
+      console.log(final)
+      summa.push(final)
+   if(final===Answers[slidecounter])
+       urAnswer++
+       ans++
+     
+       })
+    
+})
+
+
+
+
+
+
+
+
+
+
 
 
 
